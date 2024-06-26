@@ -9,7 +9,8 @@
             "name": "(lldb) 시작",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "/Users/jihun/codingTest/doit/workspace/009/009",
+            //"program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -20,3 +21,4 @@
           
     ]
 }
+

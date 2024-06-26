@@ -1,32 +1,35 @@
 #include <iostream>
 #include <deque>
 using namespace std;
+
 typedef pair<int, int> Node;
 
-int main()
-{
-    ios::sync_with_stdio(false); 
-    cin.tie(NULL);
-    cout.tie(NULL);
+int main() {
+    ios::sync_with_stdio(false);  
+    cin.tie(NULL);                
+    cout.tie(NULL);               
 
-    int n, l;
-    cin >> n >> l;
-    deque<Node> mydeque; 
+    int N, L;
+    cin >> N >> L;
+    deque<Node> mydeque;
 
-    for(int i=0; i<n ; i++) 
-    {
+    for (int i = 0; i < N; i++) {
         int now;
         cin >> now;
 
-        while(mydeque.size() && mydeque.back().first > now) 
-        {
+        while (!mydeque.empty() && mydeque.back().second > now) {
             mydeque.pop_back();
         }
-        mydeque.push_back(Node(now, i));
 
-        if(mydeque.front().second <= i - 1) {
+        mydeque.push_back(Node(i, now));  
+
+
+        if (mydeque.front().first <= i - L) {
             mydeque.pop_front();
         }
-        cout << mydeque.front().first << ' ';
+
+        cout << mydeque.front().second << ' ';  
     }
+
+    return 0;
 }
