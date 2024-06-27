@@ -2,6 +2,12 @@
     "files.associations": {
         "initializer_list": "cpp",
         "ios": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "stack": "cpp",
+        "iostream": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "queue": "cpp"
     }
 }

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -9,20 +10,20 @@ int main() {
     int n, quizNum; 
     cin >> n >> quizNum; 
 
-    int sum[100000] = {};
+    vector<int> sum(n + 1, 0);  // 누적합 배열 초기화
 
-    for(int i=1; i<=n; i++) {
+    for (int i = 1; i <= n; i++) {
         int ivalue; 
         cin >> ivalue;
-        sum[i] = sum[i-1] + ivalue; 
+        sum[i] = sum[i - 1] + ivalue; 
     }
-    
 
-    for(int i=0; i<n; i++){
-        int start, end; //1 3
+    for (int i = 0; i < quizNum; i++) {
+        int start, end; 
         cin >> start >> end;
         int res = sum[end] - sum[start - 1];
         cout << res << "\n"; 
     }
+
     return 0;
 }

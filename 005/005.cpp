@@ -7,33 +7,30 @@ int main() {
     cin.tie(NULL); 
     cout.tie(NULL); 
 
-    int n, m; 
-    cin >> n >> m; 
-    vector<long> sumArr(n, 0); 
-    vector<long> numArr(m, 0); 
-    int cnt = 0;
-    cin >> sumArr[0]; 
+    int n, m;  cin >> n >> m; 
+    vector<long> s(n, 0); 
+    vector<long> c(m, 0); 
+    long answer = 0; 
+    cin >> s[0]; 
 
     for(int i=1; i<n; i++) {
-        int tmp; 
-        cin >> tmp;
-        sumArr[i] = sumArr[i-1] + tmp; 
+        int temp = 0; 
+        cin >> temp; 
+        s[i] = s[i-1] + temp; 
     }
 
-    for(int i=0; i<n; i++) {
-        int remainder = sumArr[i] % m; 
+    for(int i=0; i<n; i++){
+        int remainderr = s[i] % m; 
 
-        if(remainder == 0){
-             ++cnt; 
-        }
-        numArr[remainder]++;
-    }    
-
-    for(int i=0; i<m; i++) {
-        if(numArr[i] > 1) {
-            cnt = cnt + (numArr[i] * (numArr[i]-1)) / 2;
+        if(remainderr == 0){ answer++; }
+        c[remainderr]++;
+    }
+    for(int i=0; i<m; i++){
+        if(c[i] > 1) {
+            answer = answer + (c[i] * (c[i]-1)/2); 
         }
     }
-    cout << cnt << "\n";
-    return 0;  
+    cout << answer << '\n';
+
+
 }
