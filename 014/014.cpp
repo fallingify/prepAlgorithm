@@ -3,17 +3,17 @@
 using namespace std;
 
 struct compare {
-    bool operator()(int a, int b) {
-        int a = abs(a); 
-        int b = abs(b); 
+    bool operator()(int a1, int b1) {
+        int a = abs(a1); 
+        int b = abs(b1); 
         if(a == b){ // 값이 같을때 
-            return a > b; 
+            return a1 > b1; 
         }
         else {
             return a > b; // 절대값을 기준으로 정렬
         }
     }
-}
+};
 
 int main(){
     ios::sync_with_stdio(false); 
