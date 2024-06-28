@@ -4,8 +4,8 @@ using namespace std;
 
 struct compare {
     bool operator()(int a, int b) {
-        int a = abs(o1); 
-        int b = abs(o2); 
+        int a = abs(a); 
+        int b = abs(b); 
         if(a == b){ // 값이 같을때 
             return a > b; 
         }
