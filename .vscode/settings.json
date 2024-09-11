@@ -8,6 +8,9 @@
         "__split_buffer": "cpp",
         "deque": "cpp",
         "string": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "__locale": "cpp",
+        "complex": "cpp",
+        "iosfwd": "cpp"
     }
 }
