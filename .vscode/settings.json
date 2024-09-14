@@ -11,6 +11,7 @@
         "queue": "cpp",
         "__locale": "cpp",
         "complex": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "ratio": "cpp"
     }
 }
